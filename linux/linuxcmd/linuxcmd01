@@ -1,0 +1,25 @@
+#linux命令-系统管理
+##时间命令
+* 1.cal 日历
+* 2.cal -y 一年日历
+* 3.date 当前时间
+* 4.date mmddhhmmyy.ss 设置时间
+* 5.sudo 需要管理员权限时使用sudo 两分钟
+* 6.ps 查看系统里运行的程序  
+ps -aux 查看所有的运行程序  
+* 7.kill Pid 关掉程序
+ kill -9 Pid 强制关闭
+* 8.top 查看Cpu占用率  
+  p 根据cpu占用率排序
+* 9.reboot 重启  
+   shutdown -r now 重启  
+   shutdown -h now 立即关机  
+   shutdown -h 20:25 定时关机  
+* 10 df 查看磁盘空间  
+  df -h 容量
+* 11.du 当前路径的文件夹容量  
+     du -h容量
+* 12.ping 测试网络
+* 13.ifconfig 查看网络地址  
+  ifconfig ens33 192.168.0.1修改指定网卡
+  
