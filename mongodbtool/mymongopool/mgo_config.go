@@ -11,7 +11,7 @@ var (
 	MgoSession     *mgo.Session
 )
 
-const MgoUri = "mongodb://zcmwrite:zcm20162016@10.139.154.116:27017/zcm_api_dev"
+const MgoUri = "mongodb://zyhwrite:zyhpwd@192.168.1.8954:27017/zyh_database"
 
 /**
  * 公共方法，获取session，如果存在则拷贝一份
