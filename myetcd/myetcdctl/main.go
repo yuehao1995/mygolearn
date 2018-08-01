@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"mygolearn/myredis/myredisutils"
 	"os"
 	"path"
 	"path/filepath"
 	"time"
-	"yd_key/kit"
 
 	"github.com/astaxie/beego"
 	"github.com/coreos/etcd/clientv3"
@@ -51,11 +51,11 @@ func main() {
 	}
 	defer CloseClientv3(cli)
 
-	MYSQL_URI, _ = kit.EtcdGet(cli, keyPrefix+"zyh_mysql_url")
-	MYSQL_URI_READ, _ = kit.EtcdGet(cli, keyPrefix+"zyh_mysql_url_read")
+	MYSQL_URI, _ = cache.EtcdGet(cli, keyPrefix+"zyh_mysql_url")
+	MYSQL_URI_READ, _ = cache.EtcdGet(cli, keyPrefix+"zyh_mysql_url_read")
 
-	REDIS_URI, _ = kit.EtcdGet(cli, keyPrefix+"redis_url")
-	REDIS_PWD, _ = kit.EtcdGet(cli, keyPrefix+"redis_pwd")
+	REDIS_URI, _ = cache.EtcdGet(cli, keyPrefix+"redis_url")
+	REDIS_PWD, _ = cache.EtcdGet(cli, keyPrefix+"redis_pwd")
 
 }
 
