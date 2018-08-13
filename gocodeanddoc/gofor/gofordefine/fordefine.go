@@ -20,16 +20,20 @@ func convertToBin(n int) string {
 func printFile(filename string) {
 	//打开文件
 	file, err := os.Open(filename)
+
 	if err != nil {
 		panic(err)
 	}
+	//返回一个file的scanner，默认的分割函数是ScanLines
 	scanner := bufio.NewScanner(file)
 	//省略起始和递增条件,go语言无while,因此for语言只有跳出条件时
+	// 直到EOF
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
 	}
 }
 func forever() {
+	//没有while
 	//省略跳出条件
 	for {
 		fmt.Println("abc")
@@ -38,7 +42,9 @@ func forever() {
 func main() {
 	fmt.Println(
 		convertToBin(5),
+		//convertToBin(13)此种写法错误
 		//括号里如果要换行,加,号
 		convertToBin(13),
 	)
+	printFile("abc.txt")
 }

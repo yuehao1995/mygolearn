@@ -26,7 +26,7 @@ func eval(a, b int, op string) (int, error) {
 	}
 }
 
-//go 函数返回值可以为多个
+//go 函数返回值可以为多个,多个返回值一般为返回值与error
 func div(a, b int) (int, int) {
 	return a / b, a % b
 }
@@ -39,7 +39,9 @@ func div1(a, b int) (q int, r int) {
 	return
 }
 
+//go语言为函数式编程，函数的参数，返回值，函数体里都可以包括函数
 func apply(op func(int, int) int, a, b int) int {
+	//反射获取函名
 	//反射获取op的值,获取函数指针
 	p := reflect.ValueOf(op).Pointer()
 	//获取函数名
@@ -49,6 +51,7 @@ func apply(op func(int, int) int, a, b int) int {
 }
 
 func pow(a, b int) int {
+	//pow,a的b次方
 	return int(math.Pow(float64(a), float64(b)))
 }
 
