@@ -1,0 +1,13 @@
+package gopointdefine
+
+func swap(a,b *int){
+    *b,*a=*a,*b
+}
+
+func swap1(a,b int){
+    a,b=b,a
+}
+
+func swap2（a,b）(int,int){
+    return b,a
+}

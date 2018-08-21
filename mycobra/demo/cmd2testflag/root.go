@@ -12,16 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package cmd
+package cmd2testflag
 
 import (
 	"fmt"
 	"os"
 
-	homedir "github.com/mitchellh/go-homedir"
+	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-)
+	)
 
 var cfgFile string
 
@@ -55,13 +55,12 @@ func init() {
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
-	//带Var的函数是将类型别名传入
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.demo.yaml)")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
-	//带p的函数是带了别名
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+
 }
 
 // initConfig reads in config file and ENV variables if set.

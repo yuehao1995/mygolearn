@@ -14,11 +14,11 @@
 
 package main
 
-import "demo/cmd"
+import "mygolearn/mycobra/demo/cmd2testflag"
 
 func main() {
 	//go run main.go test
 	//go run main.go test testson
-	//
-	cmd.Execute()
+	// cmd.Execute()
+	cmd2testflag.Execute()
 }
